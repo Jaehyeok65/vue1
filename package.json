@@ -1,0 +1,24 @@
+{
+  "name": "vue1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaehyeok65/vue1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jaehyeok65/vue1/issues"
+  },
+  "homepage": "https://github.com/Jaehyeok65/vue1#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2"
+  }
+}
