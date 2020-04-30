@@ -1,0 +1,30 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    table { border-collapse: collapse;}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <table border = "1">
+      <tr v-for="i in size-1">
+        <td v-for = "j in size">
+          {{ i+1 }} * {{ j }} = {{ (i+1)*j }}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+          size : 9
+
+      }
+    })
+   </script>
+</body>    
+</html>
