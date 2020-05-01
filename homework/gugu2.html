@@ -9,9 +9,12 @@
 <body>
   <div id="app">
     <table border = "1">
-      <tr v-for = "i in size">
-        <td v-for = "j in size-1">
-          {{ j+1 }} * {{ i }} = {{ i*(j+1)}}
+      <tr>
+        <td v-for="i in col" >
+          <div v-for ="j in row">
+            {{(i+1)}} * {{j}} = {{(i+1)*j}}
+          </div>
+
         </td>
       </tr>
     </table>
@@ -21,7 +24,8 @@
     var app = new Vue({
       el: '#app',
       data: {
-          size : 9
+          row : 9,
+          col : 8
           
 
       }
