@@ -12,7 +12,7 @@
 </head>
 <body>
   <div id="app">
-    <input type="text" v-model="value" /> 
+    <input type="text" v-model="value"/>
     <button type="button" v-on:click="plus">++</button>
     <button type="button" v-on:click="minus">--</button>
   </div>
@@ -24,10 +24,10 @@
       },
       methods: {
         plus: function () {
-            value : value + 1
+            this.value++
         },
         minus: function () {
-            value : value - 1
+            this.value--
         }
       }
     })
