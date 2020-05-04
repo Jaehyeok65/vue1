@@ -3,7 +3,7 @@
   <meta charset="utf-8" />
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <style>
-    div#app { padding: 30px; margin: 30px auto; max-width: 600px; 
+    div#app { padding: 30px; margin: 30px auto; max-width: 400px; 
       border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;  }
     span { display: inline-block; margin: 5px; padding: 8px 15px; 
       border: 1px solid black; }
@@ -13,8 +13,8 @@
   <div id="app">
       <input type="text" v-model="value">
       <button type="button" v-on:click="create">생성</button>
-      
-    <span v-for="s in words">
+      <br />
+    <span v-for="s in number" v-if="visible">
       {{ s }}
     </span>
   </div>
@@ -24,11 +24,16 @@
       el: '#app',
       data: {
           value : 0,
-        words: ["zero", "one", "two", "three", "four", "five"]
+          visible : false,
+          number: []
       },
       methods: {
           create: function () {
-              
+            this.visible = true;
+              for(let i = 0; i < this.value; i++)
+              {
+                this.number[i] = Math.floor(Math.random()*10 + 1);
+              }
           }
       }
     })
