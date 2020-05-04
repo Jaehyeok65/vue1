@@ -1,20 +1,22 @@
-function sum(...a){
+function sum(b){
+    let a = [];
+    a = b.slice(0);
     let result = 0;
-    for(let i = 0; i < a.length; i++)
+    for(let i = 0; i < 5; i++)
     {
-        result += a[i];
+        result += b[i];
     }
     return result;
 }
 
-test_sum(f){
+function test_sum(f){
     let a = [];
     for(let i = 0; i < 5; i++)
     {
         a[i] = Math.floor(Math.random()*10 + 1);
         console.log(a[i]);
     }
-    let ob = f(a[1],a[2],a[3],a[4],a[5]);
+    let ob = f(a);
     console.log(ob);
 }
 
